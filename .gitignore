@@ -205,3 +205,27 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Project requirements
+project-requirements-README.md
+
+# dbt
+target/
+dbt_packages/
+logs/
+.user.yml
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Data — don't commit pulled API data
+data/raw/
+data/interim/
+data/processed/
+
