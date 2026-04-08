@@ -1,34 +1,19 @@
-# Project Proposal: media-marketing-analyst
+# Project Proposal
 
-**Student:** Greg Lontok
-**Course:** ISBA 4715 — Analytics Engineering
-**Date:** April 13, 2026
-**Repo:** https://github.com/lontok/media-marketing-analyst
+**Name:** Greg Lontok
 
-## Target job posting
+**Project Name:** media-marketing-analyst
 
-**Analyst, Marketing Analytics — Paramount+** (West Hollywood, CA / New York, NY)
-Full posting saved at `docs/job-posting.pdf`.
+**GitHub Repo:** https://github.com/lontok/media-marketing-analyst
 
-The role sits on the Paramount+ Marketing Analytics team and primarily supports media mix modeling (MMM) and media optimization across paid acquisition channels. Core responsibilities include analyzing attribution and MMM outputs to quantify return on marketing investment, strengthening data pipelines for modeling inputs, maintaining reporting for marketing teams, and translating model outputs into activation strategies. Required skills include SQL proficiency, experience extracting and transforming data in databases, media measurement coursework, analytical tooling (Python, Tableau, Excel), and foundational predictive modeling concepts.
+## Job Posting
 
-## Reflection: why this posting fits the class
+- **Role:** Analyst, Marketing Analytics
+- **Company:** Paramount+ (Paramount Streaming)
+- **Link:** https://www.indeed.com/ (posting saved at `docs/job-posting.pdf`)
 
-This posting is a direct match for the course because it centers on SQL proficiency, warehouse data pipeline work, dashboard development, and translating analytical outputs into business insight — the exact stack we built through the dbt, Snowflake, and Streamlit lessons. The Paramount+ Analyst role requires extracting and transforming data inside a warehouse, collaborating with engineering on pipeline health, and building reporting for marketing stakeholders, all of which map cleanly onto the capstone's raw → staging → mart → dashboard flow. Building a media-mix-style project lets me practice the specific analytical lens the role demands (channel ROI, attribution, diagnostic "why did it happen" analysis) while the knowledge base gives me a way to internalize streaming industry context and MMM methodology I can speak to fluently in an interview.
+**SQL requirement (quote the posting):** "Proficient in SQL with a solid comprehension of data infrastructure; experience extracting, cleaning, and transforming data within databases."
 
-## Project framing
+## Reflection
 
-An end-to-end pipeline that simulates how a marketing analyst at a streaming service would measure cross-channel media performance for Paramount+. Structured data flows from marketing-signal APIs into Snowflake, is transformed through dbt into a star schema, and surfaces in a Streamlit dashboard answering channel-performance and demand questions. A parallel knowledge base, built from scraped streaming industry coverage and MMM methodology sources, gives me interview-ready context on both Paramount+ and the analytical techniques the job calls out.
-
-## Tentative data sources (finalized in Milestone 01)
-
-- **API (structured path):** Google Trends via `pytrends` for streaming brand and title search demand, combined with the TMDB API for content popularity and release metadata. Together these act as a proxy for marketing-driven demand lift across titles and competitors, enabling MMM-style channel and demand analysis.
-- **Web scrape (knowledge base path):** A hybrid set of sources — Paramount+ press releases and Variety / Deadline / Hollywood Reporter streaming coverage for company and industry context, plus Think with Google, Meta marketing science, and Nielsen methodology articles for MMM and attribution foundations. Target of at least 15 sources across 3+ distinct sites.
-
-## Transferability
-
-This project is designed to transfer beyond the Paramount+ posting. With minor adjustments to the source APIs or dashboard framing, the same repo supports applications to:
-
-1. **BI / marketing analyst roles at other streaming services** (Netflix, Max, Disney+) — swap title metadata, keep the channel performance and demand modeling lens.
-2. **Analytics engineer roles in consumer media or entertainment** — the dbt star schema, pipeline automation, and dashboard work stand on their own as evidence of warehouse modeling skill.
-3. **Marketing analyst roles in any subscription / DTC business** — the MMM framing (channel ROI, attribution, diagnostic analysis) generalizes to any company spending on paid acquisition.
+This posting is a direct match for the course because the Paramount+ Marketing Analytics Analyst role centers on SQL proficiency, warehouse data pipeline work, and translating analytical outputs into business insight for marketing stakeholders — the exact workflow we built through the dbt, Snowflake, and Streamlit lessons. It explicitly requires extracting, cleaning, and transforming data in databases, foundational predictive modeling concepts, and dashboard development, which map cleanly onto the capstone's raw → staging → mart → dashboard flow and the diagnostic analytics lens we practiced in class. To prove I can do this work I'll build an end-to-end pipeline that simulates media mix analysis for a streaming service: pulling marketing demand signal data from the Google Trends and TMDB APIs into Snowflake, transforming it through a dbt star schema, and surfacing channel-performance and ROI insights in a Streamlit dashboard, alongside a Claude Code knowledge base synthesized from Paramount+ press coverage and MMM methodology sources. The same project transfers cleanly to BI or marketing analyst roles at other streaming services like Netflix, Max, or Disney+ by swapping title metadata, to analytics engineer openings in consumer media where the dbt modeling and pipeline automation stand on their own, and to marketing analyst roles at any subscription or DTC business where channel ROI and attribution framing generalize directly.
